@@ -23,7 +23,6 @@ vim.opt.sidescroll=1
 vim.opt.wrap = false                 -- don't wrap lines
 vim.opt.whichwrap:append("h,l,~,[,],<,>,b,s")
 vim.opt.showmatch = true
-vim.opt.virtualedit:append("all")
 vim.opt.wildmenu = true
 vim.opt.filetype = "on"
 

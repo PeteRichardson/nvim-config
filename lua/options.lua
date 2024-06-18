@@ -18,25 +18,28 @@ vim.opt.cursorline = true           -- highlight cursor line underneath the curs
 vim.opt.splitbelow = true           -- open new vertical split bottom
 vim.opt.splitright = true           -- open new horizontal splits right
 vim.opt.termguicolors = true        -- enabl 24-bit RGB color in the TUI
-vim.opt.showmode = false         -- we are experienced, wo don't need the "-- INSERT --" mode hint
+vim.opt.showmode = true             -- show INSERT, NORMAL, etc
 vim.opt.sidescroll=1
 vim.opt.wrap = false                 -- don't wrap lines
 vim.opt.whichwrap:append("h,l,~,[,],<,>,b,s")
 vim.opt.showmatch = true
 vim.opt.wildmenu = true
 vim.opt.filetype = "on"
+-- vim.g.mapleader = ","
 
 -- Searching
 vim.opt.incsearch = true            -- search as characters are entered
-vim.opt.hlsearch = true            -- do not highlight matches
+vim.opt.hlsearch = true             -- highlight matches
 vim.opt.ignorecase = true           -- ignore case in searches by default
 vim.opt.smartcase = true            -- but make it case sensitive if an uppercase is entered
 
 -- Treesitter folding 
-vim.wo.foldmethod = 'expr'
+vim.opt.fillchars = "fold: "  
+vim.wo.foldmethod = "expr"  
 vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
-vim.opt.foldenable = false
-vim.opt.foldcolumn ='1'
+vim.opt.foldlevel = 99  
+vim.o.foldtext = [[substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').'...'.trim(getline(v:foldend)) . ' (' . (v:foldend - v:foldstart + 1) . ' lines)']]
+vim.opt.foldcolumn ='2'
 
 -- Minimap
 vim.g.minimap_width = 10

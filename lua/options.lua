@@ -1,4 +1,4 @@
-vim.opt.guifont = { "Hack Nerd Font Mono", ":h24" }
+vim.opt.guifont = { "JetBrainsMono Nerd Font Mono", ":h24" }
 
 -- Hint: use `:h <option>` to figure out the meaning if needed
 vim.opt.clipboard = 'unnamedplus' -- use system clipboard
@@ -25,7 +25,6 @@ vim.opt.whichwrap:append("h,l,~,[,],<,>,b,s")
 vim.opt.showmatch = true
 vim.opt.wildmenu = true
 vim.opt.filetype = "on"
--- vim.g.mapleader = ","
 
 -- Searching
 vim.opt.incsearch = true  -- search as characters are entered
@@ -45,9 +44,10 @@ vim.opt.foldcolumn = '2'
 
 -- Minimap
 vim.g.minimap_width = 10
-vim.g.minimap_auto_start = 1
-vim.g.minimap_auto_start_win_enter = 1
+vim.g.minimap_auto_start = 0
+vim.g.minimap_auto_start_win_enter = 0
 vim.g.minimap_window_width_override_for_scaling = 200
 vim.g.minimap_highlight_search = 1
 vim.g.minimap_left = 0
 vim.g.minimap_block_filetypes = { 'nvimtree', 'fugitive', 'nerdtree', 'tagbar', 'fzf' }
+vim.g.minimap_git_colors = 1

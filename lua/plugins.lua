@@ -38,7 +38,6 @@ require("lazy").setup({
         keys = {
             vim.keymap.set("n", "{", "<cmd>AerialPrev<CR>", { buffer = bufnr }),
             vim.keymap.set("n", "}", "<cmd>AerialNext<CR>", { buffer = bufnr }),
-            vim.keymap.set("n", "<leader>a", "<cmd>AerialToggle<CR>"),
         },
         lazy = false,
     },
@@ -69,10 +68,7 @@ require("lazy").setup({
         view = { width = 15 },
         renderer = { group_empty = true },
         filters = { dotfiles = true },
-        -- keys = {
-        --     {"n", "<leader>a", ":NvimTreeToggle<CR>", { silent = true }}
-        -- },
-        lazy = false,
+        -- lazy = false,
     },
 
     --------------------------------------
@@ -85,10 +81,10 @@ require("lazy").setup({
 
     --------------------------------------
     -- fzf plugin to improve file searching
-    -- 'junegu:web/fzf',
-    -- 'junegunn/fzf.vim',
+    'junegunn/fzf',
+    'junegunn/fzf.vim',
 
-    -- 'wfxr/minimap.vim',
+    'wfxr/minimap.vim',
 })
 
 require("nvim-tree").setup {}

@@ -9,7 +9,8 @@ local opts = {
 -----------------
 
 -- Better window navigation
-vim.keymap.set('n', '<C-S-b>', '<Esc>:NvimTreeToggle<cr>', opts)
-vim.keymap.set('n', '<C-i>', '<C-w>w', opts)
-vim.keymap.set('n', '<C-S-i>', '<C-w>p', opts)
-
+vim.keymap.set('n', '<C-S-b>', '<CMD>NvimTreeToggle<CR>', opts)
+vim.keymap.set("n", "<leader>m", "<CMD>MinimapToggle<CR>")
+vim.keymap.set("n", "<leader>a", "<CMD>AerialToggle<CR>")
+vim.keymap.set('n', '<leader>b', '<CMD>MinimapToggle<CR><CMD>AerialToggle<CR>', opts)
+vim.keymap.set('n', '<leader>w', '<CMD>:set wrap!<CR>', opts)

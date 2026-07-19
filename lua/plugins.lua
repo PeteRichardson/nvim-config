@@ -32,7 +32,6 @@ require("lazy").setup({
         opts = {},
         -- Optional dependencies
         dependencies = {
-            "nvim-treesitter/nvim-treesitter",
             "nvim-tree/nvim-web-devicons"
         },
         keys = {
@@ -83,8 +82,9 @@ require("lazy").setup({
     -- fzf plugin to improve file searching
     'junegunn/fzf',
     'junegunn/fzf.vim',
-
-    'wfxr/minimap.vim',
+    
+    'NoahTheDuke/vim-just',     -- syntax for just files
+    'wfxr/minimap.vim',         -- Minimap plugin
 })
 
 require("nvim-tree").setup {}

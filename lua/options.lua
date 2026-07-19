@@ -36,7 +36,7 @@ vim.opt.rtp:append('/opt/homebrew/bin/fzf')
 -- Treesitter folding
 vim.opt.fillchars = "fold: "
 vim.wo.foldmethod = "expr"
-vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
+vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 vim.opt.foldlevel = 99
 vim.o.foldtext =
 [[substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').'...'.trim(getline(v:foldend)) . ' (' . (v:foldend - v:foldstart + 1) . ' lines)']]
